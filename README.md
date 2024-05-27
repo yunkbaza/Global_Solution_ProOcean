@@ -1,3 +1,5 @@
+GLOBAL SOLUTION
+
 Alunos:
 
 Allan Gabriel Baeza Amirati
