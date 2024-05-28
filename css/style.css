@@ -9,7 +9,7 @@
 body{
     padding: 20px;
     width: 100%;
-    background-color: black;
+    background-color: #02131F;
 }
 
 .cabecalho{
@@ -20,6 +20,7 @@ body{
 
 .logo{
     width: 12%;
+    height: 12%;
 }
 
 .navegacao ul{
@@ -31,7 +32,6 @@ body{
 
     .texto-nav{
         text-decoration: none;
-        background-color: #000;
         border: none;
         outline: none;
         color: #d9d9d9;
