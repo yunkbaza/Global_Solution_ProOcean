@@ -9,35 +9,38 @@
 body{
     padding: 20px;
     width: 100%;
-    background-color: #02131F;
+    height: 100vh;
+    background: linear-gradient(rgba(45,213,246, 0.6), rgba(45,213,246, 0.7)), url("../img/textura_agua.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cabecalho{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+
 }
 
-.logo{
-    width: 12%;
-    height: 12%;
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .navegacao ul{
     display: flex;
+    justify-content: space-around;
     list-style: none;
-    align-items: center;
-    justify-content: end;
-    gap: 30%;
 
     .texto-nav{
         text-decoration: none;
         border: none;
         outline: none;
-        color: #d9d9d9;
+        color: white;
         width: 170px;
         height: 70px;
-        font-size: 25px;
+        font-size: 30px;
         font-family: "K2D" , sans-serif;
         font-weight: 700
     }
@@ -55,7 +58,7 @@ body{
     height: 0.175rem;
     left: 0;
     bottom: 0;
-    background-color: #d9d9d9;
+    background-color: white;
     transform: scale(0,1);
     transition: transform 0.3s;
 }
