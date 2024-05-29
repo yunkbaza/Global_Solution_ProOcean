@@ -1,34 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;700&family=Kumbh+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+.cabecalho {
     padding: 20px;
-    width: 100%;
-    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(rgba(45,213,246, 0.6), rgba(45,213,246, 0.7)), url("../img/textura_agua.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
 }
 
-.cabecalho{
-    display: flex;
-    flex-direction: column;
 
-}
-
-.imagem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.navegacao ul{
+.navegacao ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -42,13 +40,11 @@ body{
         height: 70px;
         font-size: 30px;
         font-family: "K2D" , sans-serif;
-        font-weight: 700
+        font-weight: 700;
+        cursor: pointer;
+        position: relative;
     }
-}
-
-.texto-nav{
-    cursor: pointer;
-    position: relative;
+    
 }
 
 .texto-nav::after{
@@ -65,4 +61,77 @@ body{
 
 .texto-nav:hover::after{
     transform: scale(1,1);
+}
+
+main {
+    font-family: "Kumbh Sans" , sans-serif;
+}
+
+.intro {
+    background-color: #00bfff;
+    color: #ffffff;
+    padding: 100px 20px;
+
+    h1{
+        text-align: right;
+    }
+    p{
+        text-align: left;
+    }
+}
+
+.plano {
+    background-color: #008b8b;
+    color: #000000;
+    padding: 100px 20px;
+
+    h1{
+        text-align: left;
+    }
+    p{
+        text-align: right;
+    }
+}
+
+.como {
+    background-color: #00688b;
+    color: #ffffff;
+    padding: 100px 20px;
+    
+    h1{
+        text-align: left;
+    }
+    p{
+        text-align: right;
+    }
+}
+
+.solucao {
+    background-color: #104e8b;
+    color: #000000;
+    padding: 40px 20px;
+
+    h1{
+        text-align: right;
+    }
+    p{
+        text-align: left;
+    }
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size:40px;
+    margin-bottom: 10px;
+}
+
+.rodape{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+
 }
