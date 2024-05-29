@@ -18,7 +18,6 @@ body{
 .cabecalho{
     display: flex;
     flex-direction: column;
-
 }
 
 .imagem{
