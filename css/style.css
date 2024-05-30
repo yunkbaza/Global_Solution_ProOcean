@@ -6,8 +6,11 @@
     box-sizing: border-box;
 }
 
+body.no-scroll{
+    overflow: hidden;
+}
+
 body{
-    padding: 20px;
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(45,213,246, 0.6), rgba(45,213,246, 0.7)), url("../img/textura_agua.jpg");
@@ -15,9 +18,20 @@ body{
     background-size: cover;
 }
 
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: #0092C4;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #004AAB;
+    border-radius: 10px;
+}
+
 .cabecalho{
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 .imagem{
@@ -64,4 +78,38 @@ body{
 
 .texto-nav:hover::after{
     transform: scale(1,1);
+}
+
+.container-inicio{
+    margin: 5%;
+}
+
+.introducao-ideias{
+    background-image: url("../img/primeira-mask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 20%;
+}
+
+.conteudo-introducao{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botoes{
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+dialog::backdrop{
+    display: flex;
+    align-items: center;
+}
+
+dialog{
+    margin: 7% auto;
+    width: 50%;
+    height: 50%;
 }
