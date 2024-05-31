@@ -40,3 +40,16 @@ fecharNatureza.addEventListener("click" , () => {
     modalNatureza.close();
     document.body.classList.remove('no-scroll');
 });
+
+const fecharAoClicarFora = (modal) => {
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.close();
+            document.body.classList.remove('no-scroll');
+        }
+    });
+};
+
+fecharAoClicarFora(modalPlataforma);
+fecharAoClicarFora(modalProOcean);
+fecharAoClicarFora(modalNatureza);
