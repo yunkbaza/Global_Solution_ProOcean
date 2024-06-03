@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body.no-scroll{
     overflow: hidden;
 }
@@ -98,11 +102,17 @@ body{
     transform: scale(1,1);
 }
 
-.container-inicio{
-    margin: 5%;
+#container-inicio{
+    margin-bottom: 5%;
 }
 
-.introducao-ideias{
+.onda{
+    width: 100%;
+    margin-top: 20px;
+    position: absolute;
+}
+
+#introducao-ideias{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -113,11 +123,6 @@ body{
     justify-content: space-between;
     background-color: #22A9D3;
     overflow: hidden;
-}
-
-.onda{
-    width: 100%;
-    display: block;
 }
 
 .titulo{
@@ -166,7 +171,7 @@ dialog::backdrop{
 dialog {
     margin: 7% auto;
     width: 50%;
-    height: 50%;
+    height: auto;
     border: none;
     border-radius: 10px;
     flex-direction: column;
@@ -190,7 +195,7 @@ dialog[open] {
     }
 }
 
-#btn-fechar-natureza , #btn-fechar-plataforma , #btn-fechar-proocean{
+#btn-fechar-natureza , #btn-fechar-boia , #btn-fechar-proocean{
     cursor: pointer;
     padding: 1%;
     max-width: fit-content;
@@ -204,7 +209,7 @@ dialog[open] {
     border: none;
 }
 
-#btn-fechar-natureza:hover , #btn-fechar-plataforma:hover , #btn-fechar-proocean:hover{
+#btn-fechar-natureza:hover , #btn-fechar-boia:hover , #btn-fechar-proocean:hover{
     background-color: #0092C4;
 }
 
@@ -213,13 +218,10 @@ dialog[open] {
     animation: peixeNadando 10s infinite ease-in-out;
 }
 
-.onda-fundo{
-    background-color: #22A9D3;
-}
-
 .acao-solucao{
     background-color: #15A1CD;
     overflow: hidden;
+    padding-top: 2%;
 }
 
 .peixe-tropical{
