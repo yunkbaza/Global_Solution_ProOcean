@@ -54,6 +54,24 @@ body{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    height: 85vh;
+}
+
+.logo{
+    position: sticky;
+    top: 0;
+    animation: transicaoLogo 1ms linear both;
+    animation-timeline: view();
+    animation-range: cover 50% cover 100%;
+}
+
+@keyframes transicaoLogo{
+    from{
+        scale: 1 1;
+    }
+    to{
+        scale: .4 .4;
+    }
 }
 
 .imagem{
@@ -67,23 +85,38 @@ body{
     display: flex;
     justify-content: space-around;
     list-style: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    animation: fundoHeader 1ms linear both;
+    animation-timeline: scroll();
+    animation-range: cover 0% cover 50%;
+}
 
-    .texto-nav{
-        text-decoration: none;
-        border: none;
-        outline: none;
-        color: white;
-        width: 170px;
-        height: 70px;
-        font-size: 30px;
-        font-family: "K2D" , sans-serif;
-        font-weight: 700
+@keyframes fundoHeader{
+    from{
+        background-color: transparent
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.4)
     }
 }
 
 .texto-nav{
     cursor: pointer;
     position: relative;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: white;
+    width: 170px;
+    height: 70px;
+    font-size: 30px;
+    font-family: "K2D" , sans-serif;
+    font-weight: 700
 }
 
 .texto-nav::after{
@@ -100,16 +133,28 @@ body{
 
 .texto-nav:hover::after{
     transform: scale(1,1);
-}
-
-#container-inicio{
-    margin-bottom: 5%;
-}
+}   
 
 .onda{
+    display: block;
     width: 100%;
-    margin-top: 20px;
-    position: absolute;
+    left: 0;
+}
+
+.onda-fundo{
+    background-color: #22A9D3;
+}
+
+.onda-fundo1{
+    background-color: #15A1CD;
+}
+
+.onda-fundo2{
+    background-color: #1C7793;
+}
+
+.onda-fundo3{
+    background-color: #0D3744;
 }
 
 #introducao{
@@ -136,8 +181,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    padding-top: 2%;
-    padding-bottom: 7%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -238,7 +281,7 @@ dialog[open] {
     animation: peixeNadando 10s infinite ease-in-out;
 }
 
-.acao-solucao{
+#acao-solucao{
     background-color: #1C7793;
     overflow: hidden;
     padding-top: 2%;
@@ -247,4 +290,79 @@ dialog[open] {
 .peixe-tropical{
     width: 5%;
     animation: peixeTropicalNadando 10s infinite ease-in-out;
+}
+
+.contato{
+    background-color: #0D3744;
+}
+
+fieldset{
+    border: none;
+    background-color: #0D3744;
+}
+
+form{
+    background-color: #0D3744;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+legend{
+    font-family: "K2D" , sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+label{
+    font-family: "K2D" , sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+input , textarea{
+    font-family: "K2D" , sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    border: #15A1CD solid 3px;
+    color: black;
+    min-width: 50vw;
+    max-width: 50vw;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+input:focus , textarea:focus{
+    border: #1C7793 solid 3px;
+}
+
+.mensagem textarea{
+    max-height: 15vh;
+    min-height: 15vh;
+}
+
+.email , .mensagem , .nome{
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape{
+    background-color: #0D3744;
+}
+
+.enviar{
+    background-color: #15A1CD;
+    color: white;
+    font-family: "K2D" , sans-serif;
+    font-size: 35px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
 }
