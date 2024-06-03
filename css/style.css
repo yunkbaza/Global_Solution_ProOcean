@@ -112,6 +112,26 @@ body{
     position: absolute;
 }
 
+#introducao{
+    background-color: #22A9D3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2% 5% 7% 5%;
+}
+
+.texto{
+    color: white;
+    font-size: 25px;
+    font-family: "K2D" , sans-serif;
+    text-align: justify;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
 #introducao-ideias{
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,7 +141,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #22A9D3;
+    background-color: #15A1CD;
     overflow: hidden;
 }
 
@@ -219,7 +239,7 @@ dialog[open] {
 }
 
 .acao-solucao{
-    background-color: #15A1CD;
+    background-color: #1C7793;
     overflow: hidden;
     padding-top: 2%;
 }
