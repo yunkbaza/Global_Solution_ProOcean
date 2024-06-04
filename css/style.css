@@ -7,21 +7,71 @@
     box-sizing: border-box;
 }
 
-.cabecalho {
-    padding: 20px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+html{
+    scroll-behavior: smooth;
+}
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
     background: linear-gradient(rgba(45,213,246, 0.6), rgba(45,213,246, 0.7)), url("../img/textura_agua.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+}
 
-    .logo img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 50px;
-        margin-bottom: 80px;
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: #0092C4;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #004AAB;
+    border-radius: 10px;
+}
+
+@keyframes peixeNadando {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes peixeTropicalNadando{
+    0%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(-100px);
+    }
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 85vh;
+}
+
+.logo{
+    position: sticky;
+    top: 0;
+    animation: transicaoLogo 1ms linear both;
+    animation-timeline: view();
+    animation-range: cover 50% cover 100%;
+}
+
+@keyframes transicaoLogo{
+    from{
+        scale: 1 1;
+    }
+    to{
+        scale: .4 .4;
     }
 }
 
@@ -30,21 +80,38 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    animation: fundoHeader 1ms linear both;
+    animation-timeline: scroll();
+    animation-range: cover 0% cover 50%;
+}
 
-    .texto-nav{
-        text-decoration: none;
-        border: none;
-        outline: none;
-        color: white;
-        width: 170px;
-        height: 70px;
-        font-size: 30px;
-        font-family: "K2D" , sans-serif;
-        font-weight: 700;
-        cursor: pointer;
-        position: relative;
+@keyframes fundoHeader{
+    from{
+        background-color: transparent
     }
-    
+    to{
+        background-color: rgba(0, 0, 0, 0.4)
+    }
+}
+
+.texto-nav{
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: white;
+    width: 170px;
+    height: 70px;
+    font-size: 30px;
+    font-family: "K2D" , sans-serif;
+    font-weight: 700
 }
 
 .texto-nav::after{
@@ -61,77 +128,241 @@
 
 .texto-nav:hover::after{
     transform: scale(1,1);
+}   
+
+.onda{
+    display: block;
+    width: 100%;
+    left: 0;
 }
 
-main {
-    font-family: "Kumbh Sans" , sans-serif;
+.onda-fundo{
+    background-color: #22A9D3;
 }
 
-.intro {
-    background-color: #00bfff;
-    color: #ffffff;
-    padding: 100px 20px;
+.onda-fundo1{
+    background-color: #15A1CD;
+}
 
-    h1{
-        text-align: right;
-    }
-    p{
-        text-align: left;
+.onda-fundo2{
+    background-color: #1C7793;
+}
+
+.onda-fundo3{
+    background-color: #0D3744;
+}
+
+#introducao{
+    background-color: #22A9D3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 2% 5% 7% 5%;
+}
+
+.texto{
+    color: white;
+    font-size: 25px;
+    font-family: "K2D" , sans-serif;
+    text-align: justify;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#introducao-ideias{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #15A1CD;
+    overflow: hidden;
+}
+
+.titulo{
+    font-size: 60px;
+    font-family: "K2D" , sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.conteudo-introducao{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao-secundario{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoes{
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 230px;
+    height: 230px;
+    transition: 0.4s ease-in-out;
+
+    img{
+        width: 230px;
     }
 }
 
-.plano {
-    background-color: #008b8b;
-    color: #000000;
-    padding: 100px 20px;
+.botoes:hover{
+    width: 250px;
+    height: 250px;
+}
 
-    h1{
-        text-align: left;
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    margin: 7% auto;
+    width: 50%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "K2D" , sans-serif;
+    font-size: 20px;
+}
+
+dialog[open] {
+    animation: fade-in 500ms forwards;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
     }
-    p{
-        text-align: right;
+    100%{
+        opacity: 1;
     }
 }
 
-.como {
-    background-color: #00688b;
-    color: #ffffff;
-    padding: 100px 20px;
-    
-    h1{
-        text-align: left;
-    }
-    p{
-        text-align: right;
-    }
+#btn-fechar-natureza , #btn-fechar-boia , #btn-fechar-proocean{
+    cursor: pointer;
+    padding: 1%;
+    max-width: fit-content;
+    width: 100%;
+    font-size: 30px;
+    border-radius: 10px;
+    font-family: "K2D" , sans-serif;
+    background-color: #004AAB;
+    color: white;
+    transition: 0.4s ease-in-out;
+    border: none;
 }
 
-.solucao {
-    background-color: #104e8b;
-    color: #000000;
-    padding: 40px 20px;
-
-    h1{
-        text-align: right;
-    }
-    p{
-        text-align: left;
-    }
+#btn-fechar-natureza:hover , #btn-fechar-boia:hover , #btn-fechar-proocean:hover{
+    background-color: #0092C4;
 }
 
-h1 {
-    font-size: 80px;
-    margin-bottom: 50px;
+.peixe{
+    width: 5%;
+    animation: peixeNadando 10s infinite ease-in-out;
 }
 
-p {
-    font-size:40px;
-    margin-bottom: 10px;
+#acao-solucao{
+    background-color: #1C7793;
+    overflow: hidden;
+    padding-top: 2%;
+}
+
+.peixe-tropical{
+    width: 5%;
+    animation: peixeTropicalNadando 10s infinite ease-in-out;
+}
+
+.contato{
+    background-color: #0D3744;
+}
+
+fieldset{
+    border: none;
+    background-color: #0D3744;
+}
+
+form{
+    background-color: #0D3744;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+legend{
+    font-family: "K2D" , sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+label{
+    font-family: "K2D" , sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+input , textarea{
+    font-family: "K2D" , sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    border: #15A1CD solid 3px;
+    color: black;
+    min-width: 50vw;
+    max-width: 50vw;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+input:focus , textarea:focus{
+    border: #1C7793 solid 3px;
+}
+
+.mensagem textarea{
+    max-height: 15vh;
+    min-height: 15vh;
+}
+
+.email , .mensagem , .nome{
+    display: flex;
+    flex-direction: column;
 }
 
 .rodape{
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
+    background-color: #0D3744;
+}
 
+#enviar{
+    background-color: #15A1CD;
+    color: white;
+    font-family: "K2D" , sans-serif;
+    font-size: 35px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.4s ease-in-out;
+}
+
+#enviar:hover{
+    background-color: #1C7793;
 }
