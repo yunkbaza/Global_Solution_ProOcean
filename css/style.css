@@ -278,7 +278,7 @@ dialog[open] {
 #acao-solucao{
     background-color: #1C7793;
     overflow: hidden;
-    padding-top: 2%;
+    padding: 2% 5% 7% 5%;
 }
 
 .peixe-tropical{
@@ -344,9 +344,6 @@ input:focus , textarea:focus{
     flex-direction: column;
 }
 
-.rodape{
-    background-color: #0D3744;
-}
 
 #enviar{
     background-color: #15A1CD;
@@ -364,4 +361,43 @@ input:focus , textarea:focus{
 
 #enviar:hover{
     background-color: #1C7793;
+}
+
+
+.rodape{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #030F12;
+    height: 200px;
+}
+ 
+.peixe-lanterna{
+    width: 10%;
+    animation: peixeLanterna 4s infinite linear;
+}
+ 
+@keyframes peixeLanterna{
+    0%{
+        transform: translateY(+10px);
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(+10px);
+    }
+}
+ 
+.direitos{
+    color: white;
+    font-family: "K2D" , sans-serif;
+    font-weight: 600;
 }
