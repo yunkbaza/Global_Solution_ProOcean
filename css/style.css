@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;700&family=Kumbh+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,14 +75,8 @@ body{
     }
 }
 
-.imagem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
 
-.navegacao ul{
+.navegacao ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
