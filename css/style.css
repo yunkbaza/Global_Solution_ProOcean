@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;700&family=Kumbh+Sans:wght@100..900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,7 +34,7 @@ body{
 
 @keyframes peixeNadando {
     0%{
-        transform: translateX(-100px);
+        transform: translateX(-200px);
     }
     100%{
         transform: translateX(100vw);
@@ -46,8 +46,16 @@ body{
         transform: translateX(100vw);
     }
     100%{
-        transform: translateX(-100px);
+        transform: translateX(-200px);
     }
+}
+
+.imagem{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cabecalho{
@@ -59,20 +67,8 @@ body{
 }
 
 .logo{
-    animation: transicaoLogo 1ms linear both;
-    animation-timeline: view();
-    animation-range: cover 50% cover 100%;
+    width: 55%;
 }
-
-@keyframes transicaoLogo{
-    from{
-        scale: 1 1;
-    }
-    to{
-        scale: .4 .4;
-    }
-}
-
 
 .navegacao ul {
     display: flex;
@@ -109,7 +105,8 @@ body{
     height: 70px;
     font-size: 30px;
     font-family: "K2D" , sans-serif;
-    font-weight: 700
+    font-weight: 700;
+    text-shadow: black 0.05em 0.05em 0.05em;
 }
 
 .texto-nav::after{
