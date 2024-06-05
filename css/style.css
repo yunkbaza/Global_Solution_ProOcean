@@ -20,6 +20,7 @@ body{
     background: linear-gradient(rgba(45,213,246, 0.7), rgba(45,213,246, 0.7)), url("../img/textura_agua.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 280px;
 }
 
 ::-webkit-scrollbar{
@@ -56,6 +57,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .cabecalho{
@@ -67,7 +69,7 @@ body{
 }
 
 .logo{
-    width: 55%;
+    width: 55vw;
 }
 
 .navegacao ul {
@@ -103,7 +105,7 @@ body{
     color: white;
     width: 170px;
     height: 70px;
-    font-size: 30px;
+    font-size: 35px;
     font-family: "K2D" , sans-serif;
     font-weight: 700;
     text-shadow: black 0.05em 0.05em 0.05em;
@@ -170,7 +172,6 @@ body{
 #introducao-ideias{
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -245,6 +246,14 @@ dialog[open] {
     }
     100%{
         opacity: 1;
+    }
+}
+
+#modal-proocean , #modal-boia , #modal-natureza{
+    width: 80%;
+
+    p{
+        font-size: 26px;
     }
 }
 
@@ -390,7 +399,6 @@ input:focus , textarea:focus{
 .tubarao-fundo{
     background-color: #0D3744;
     overflow: hidden;
-    height: 30vh;
     display: flex;
     align-items: center;
 }
@@ -466,5 +474,147 @@ input:focus , textarea:focus{
     }
     100%{
         transform: translateY(+10px);
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .tubarao{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .direitos{
+        font-size: 13px;
+    }
+
+    .rodape{
+        height: 200px;
+    }
+
+    .botoes{
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .texto-nav{
+        font-size: 24px;
+    }
+
+    .cabecalho{
+        height: 50vh;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    .texto{
+        font-size: 20px;
+    }
+
+    .botoes{
+        width: 180px;
+        height: 180px;
+
+        img{
+            width: 180px;
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    .direitos{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .botoes{
+        width: 150px;
+        height: 150px;
+
+        img{
+            width: 150px;
+        }
+    }
+
+    .direitos{
+        font-size: 8px;
+    }
+
+    .rodape{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .navegacao ul{
+        padding: 10px;
+    }
+
+    .texto-nav{
+        font-size: 18px;
+    }
+
+    .texto{
+        font-size: 16px;
+    }
+
+    .botoes{
+        width: 130px;
+        height: 130px;
+
+        img{
+            width: 130px;
+        }
+    }
+
+    .rodape{
+        height: 130px;
+    }
+}
+
+@media screen and (max-width:456px) {
+    .direitos{
+        font-size: 6px;
+    }
+
+    .rodape{
+        height: 110px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .texto-nav{
+        font-size: 13px;
+    }
+
+    .texto{
+        font-size: 12px;
+    }
+
+    .botoes{
+        width: 100px;
+        height: 100px;
+
+        img{
+            width: 100px;
+        }
+    }
+}
+
+@media screen and (max-width:380px) {
+    .texto{
+        font-size: 10px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .direitos{
+        text-align: center;
     }
 }
