@@ -125,7 +125,7 @@ body{
 
 .texto-nav:hover::after{
     transform: scale(1,1);
-}   
+}
 
 .onda{
     display: block;

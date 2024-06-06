@@ -2,7 +2,6 @@ const botaoBoia = document.querySelector("#botao-boia");
 const botaoProOcean = document.querySelector("#botao-proocean");
 const botaoNatureza = document.querySelector("#botao-natureza");
 
-
 const modalBoia = document.querySelector("#modal-boia");
 const modalProOcean = document.querySelector("#modal-proocean");
 const modalNatureza = document.querySelector("#modal-natureza");
