@@ -283,6 +283,10 @@ body{
     .infos a img{
         width: 80px;
     }
+
+    .imagem-participante{
+        width: 300px;
+    }
 }
 
 @media screen and (max-width: 920px) {
@@ -330,7 +334,7 @@ body{
     }
 
     .imagem-participante{
-        width: 45%;
+        width: 150px;
     }
 }
 

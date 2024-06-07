@@ -159,7 +159,7 @@ input:focus , textarea:focus{
     background-color: #0D3744;
 }
 
-.enviar{
+#enviar{
     background-color: #0092C4;
     color: white;
     font-family: "K2D" , sans-serif;
@@ -173,7 +173,7 @@ input:focus , textarea:focus{
     transition: 0.4s ease-in-out;
 }
 
-.enviar:hover{
+#enviar:hover{
     background-color: #0D3744;
 }
 
