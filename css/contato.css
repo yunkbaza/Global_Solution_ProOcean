@@ -350,7 +350,7 @@ input:focus , textarea:focus{
 
     input , textarea{
         min-width: 90vw;
-        font-family: 15px;
+        font-weight: 15px;
     }
 }
 
