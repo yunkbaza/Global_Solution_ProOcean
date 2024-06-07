@@ -159,6 +159,16 @@ input:focus , textarea:focus{
     background-color: #0D3744;
 }
 
+#paragrafo-sucesso{
+    color: #2BA02D;
+    font-family: "K2D" , sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    background-color: #1C7793;
+    text-align: center;
+    display: none;
+}
+
 #enviar{
     background-color: #0092C4;
     color: white;
@@ -171,6 +181,26 @@ input:focus , textarea:focus{
     cursor: pointer;
     margin-top: 30px;
     transition: 0.4s ease-in-out;
+    animation: erroEnviar .2s 1 forwards;
+    animation-iteration-count: 5;
+}
+
+@keyframes erroEnviar{
+    0%{
+        transform: translateX(-10px);
+    }
+    25%{
+        transform: translateX();
+    }
+    50%{
+        transform: translateX(+10px);
+    }
+    75%{
+        transform: translateX();
+    }
+    100%{
+        transform: translateX(-10px);
+    }
 }
 
 #enviar:hover{

@@ -4,13 +4,23 @@ const requerimento = document.querySelectorAll(".requerimento");
 const emailRegex = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}(?:\.[a-z]{2,})?$/i;
 const telefoneRegex = /^\d+$/;
 
-form.addEventListener('submit' , (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
     validarNome();
     validarEmail();
     validarTelefone();
+    validarMensagem();
+    validarSucesso();
 });
 
+document.querySelector("#enviar").addEventListener('click', (event) => {
+    event.preventDefault();
+    validarNome();
+    validarEmail();
+    validarTelefone();
+    validarMensagem();
+    validarSucesso();
+});
 
 function erro(index) {
     campos[index].style.border = '2px solid red';
@@ -38,8 +48,11 @@ function validarEmail() {
     if(!emailRegex.test(campos[1].value)) {
         erro(1);
     }
+    else if(campos[1].value.length === 0) {
+        removerErro(1);
+    } 
     else{
-        removerErro(1)
+        removerErro(1);
     }
 }
 
@@ -56,5 +69,26 @@ function validarMensagem() {
         erro(3)
     else{
         removerErro(3)
+    }
+}
+
+const sucessoParagrafo = document.querySelector("#paragrafo-sucesso");
+const erroEnviar = document.querySelector("#enviar")
+
+function sucesso() {
+    sucessoParagrafo.style.display = 'block';
+}
+
+function validarSucesso() {
+    let todosValidos = true;
+
+    for (let i = 0; i < campos.length; i++) {
+        if (requerimento[i].style.display === 'block') {
+            todosValidos = false;
+        }
+    }
+
+    if (todosValidos) {
+        sucesso();
     }
 }
