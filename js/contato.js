@@ -85,6 +85,7 @@ function validarSucesso() {
     for (let i = 0; i < campos.length; i++) {
         if (requerimento[i].style.display === 'block') {
             todosValidos = false;
+            erroEnviar.style.animation = 'fundoHeader 1ms linear '
         }
     }
 
